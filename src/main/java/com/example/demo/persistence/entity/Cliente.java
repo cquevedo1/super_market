@@ -15,15 +15,14 @@ public class Cliente {
 
     private String nombre;
 
-    @Column(name = "apellidos")
-    private String apellido;
+    private String apellidos;
 
     private Integer celular;
 
     private String direccion;
 
     @Column(name = "correo_electronico")
-    private String email;
+    private String correoElectronico;
 
     public String getIdCliente() {
         return idCliente;
@@ -41,12 +40,12 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidos(String apellido) {
+        this.apellidos = apellido;
     }
 
     public Integer getCelular() {
@@ -65,11 +64,11 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreoElectronico(String email) {
+        this.correoElectronico = email;
     }
 }
