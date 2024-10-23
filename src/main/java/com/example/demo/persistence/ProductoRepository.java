@@ -16,7 +16,7 @@ public class ProductoRepository {
     }
 
     public List<Producto> getByCategoria(int idCategoria) {
-        return productoCrudRepository.findByIdCategoriaOrderByNombreAsc(idCategoria);
+        return productoCrudRepository.    findByIdCategoriaOrderByNombreAsc(idCategoria);
     }
 
     public Optional<List<Producto>> getByFaltantes(int cantidad) {

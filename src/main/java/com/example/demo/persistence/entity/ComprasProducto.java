@@ -15,6 +15,9 @@ public class ComprasProducto {
 
     private Boolean estado;
 
+    //    Cuando una tabla tiene un foreign key se usa JoinColumn y en la tabla de
+    //    donde se origina ese foreign key se usa dentro de la relacion el mappedBy
+    //    con el nombre del atributo de la clase donde se uso el JoinColumn.
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private Compra compra;
