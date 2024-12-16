@@ -2,8 +2,7 @@ package com.example.demo.web.controller;
 
 import com.example.demo.domain.Product;
 import com.example.demo.domain.service.ProductService;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,23 +16,28 @@ public class ProductController {
         this.productService = productService;
     }
 
+    @GetMapping("/all")
     public List<Product> getAllProducts() {
         return productService.getAll();
     }
 
-    public Optional<Product> getProductById(int productId) {
+    @GetMapping("/{id}")
+    public Optional<Product> getProductById(@PathVariable("id") int productId) {
         return productService.getProductById(productId);
     }
 
-    public Optional<List<Product>> getProductByCategory(int categoryId) {
+    @GetMapping("/category/{categoryId}")
+    public Optional<List<Product>> getProductByCategory(@PathVariable("categoryId") int categoryId) {
         return productService.getByCategory(categoryId);
     }
 
-    public Product save(Product product) {
+    @PostMapping("/save")
+    public Product save(@RequestBody Product product) {
         return productService.save(product);
     }
 
-    public boolean deleteProductById(int productId) {
+    @DeleteMapping("/delete/{id}")
+    public boolean deleteProductById(@PathVariable("id") int productId) {
         return productService.delete(productId);
     }
 }
