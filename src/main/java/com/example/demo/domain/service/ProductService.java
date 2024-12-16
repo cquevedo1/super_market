@@ -2,7 +2,6 @@ package com.example.demo.domain.service;
 
 import com.example.demo.domain.Product;
 import com.example.demo.domain.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
